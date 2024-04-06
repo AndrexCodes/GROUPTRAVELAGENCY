@@ -1,9 +1,4 @@
-@layer base{
-    /* index.html */
-    
-    /* index.html */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-    /* login.html */
-
-    /* login.html */
-}
