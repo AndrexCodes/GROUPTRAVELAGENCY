@@ -2,3 +2,17 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer components{
+    .images div{
+        @apply p-10 flex flex-col items-center gap-4
+    }
+    .images div img{
+        @apply h-4/5 rounded-full object-cover ring-4 ring-white
+    }
+    .images div i{
+        @apply p-2 ring-2 ring-white rounded-full aspect-square
+    }
+
+
+    
+}
