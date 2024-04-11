@@ -3,6 +3,7 @@
 @tailwind utilities;
 
 @layer components{
+    /* index.html */
     .images div{
         @apply p-10 flex flex-col items-center gap-4
     }
@@ -12,7 +13,7 @@
     .images div i{
         @apply p-2 ring-2 ring-white rounded-full aspect-square
     }
-
+    /* index.html */
 
     
 }
