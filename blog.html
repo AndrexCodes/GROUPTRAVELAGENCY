@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- ALVIN-->
+<head>
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/css/blog.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+<link rel="stylesheet"
+        href="https://demos.creative-tim.com/notus-js/assets/vendor/@fortawesome/fontawesome-free/css/all.min.css">
+  </head>
+  <body>
+    
+
+
+    <!-- navbar -->
+    <nav>
+      
+      <nav class="bg-gray-800">
+        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+            <div class="relative flex h-16 items-center justify-between">
+                <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
+                    <!-- Mobile menu button-->
+                    <button type="button"
+                        class="relative inline-flex items-center justify-center rounded-md p-2 text-gray-400 hover:bg-gray-700 hover:text-white focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white"
+                        aria-controls="mobile-menu" aria-expanded="false">
+                        <span class="absolute -inset-0.5"></span>
+                        <span class="sr-only">Open main menu</span>
+                        <!--
+              Icon when menu is closed.
+  
+              Menu open: "hidden", Menu closed: "block"
+            -->
+                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                        </svg>
+                        <!--
+              Icon when menu is open.
+  
+              Menu open: "block", Menu closed: "hidden"
+            -->
+                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+
+                    <div class="hidden sm:ml-6 sm:block">
+                        <div class="flex space-x-4">
+                            <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                            <a href="index.html" class="bg-gray-900 text-white rounded-md px-3 py-2 text-sm font-medium"
+                                aria-current="page">Home page</a>
+                            <a href="login.html"
+                                class="text-gray-300 hover:bg-gray-700 hover:hover:text-red-300 rounded-md px-3 py-2 text-sm font-medium">Log
+                                In</a>
+                            <a href="toursandtravels.html"
+                                class="text-gray-300 hover:bg-gray-700 hover:text-red-300 rounded-md px-3 py-2 text-sm font-medium">Tours
+                                & Travel</a>
+                            <a href="blog.html"
+                                class="text-gray-300 hover:bg-gray-700 hover:hover:text-red-300 rounded-md px-3 py-2 text-sm font-medium">Gallery</a>
+                            <a href="customer review.html"
+                                class="text-gray-300 hover:bg-gray-700 hover:hover:text-red-300 rounded-md px-3 py-2 text-sm font-medium">Review</a>
+                            <a href="about.html"
+                                class="text-gray-300 hover:bg-gray-700 hover:hover:text-red-300 rounded-md px-3 py-2 text-sm font-medium">About
+                                Us</a>
+
+                        </div>
+                    </div>
+                </div>
+                <div
+                    class="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
+                    <button type="button"
+                        class="relative rounded-full bg-gray-800 p-1 text-gray-400 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800">
+                        <span class="absolute -inset-1.5"></span>
+                        <span class="sr-only">View notifications</span>
+                        <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                            stroke="currentColor" aria-hidden="true">
+                            <path stroke-linecap="round" stroke-linejoin="round"
+                                d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                        </svg>
+                    </button>
+
+                    <!-- Profile dropdown -->
+                    <div class="relative ml-3">
+                        <div>
+                            <button type="button"
+                                class="relative flex rounded-full bg-gray-800 text-sm focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-gray-800"
+                                id="user-menu-button" aria-expanded="false" aria-haspopup="true">
+                            </button>
+                        </div>
+
+                        <!--
+              Dropdown menu, show/hide based on menu state.
+  
+              Entering: "transition ease-out duration-100"
+                From: "transform opacity-0 scale-95"
+                To: "transform opacity-100 scale-100"
+              Leaving: "transition ease-in duration-75"
+                From: "transform opacity-100 scale-100"
+                To: "transform opacity-0 scale-95"
+            -->
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sm:hidden" id="mobile-menu">
+            <div class="space-y-1 px-2 pb-3 pt-2">
+                <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
+                <a href="#" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
+                    aria-current="page">Home page</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Log
+                    In</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Tours
+                    & Travel</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Gallery
+                    & Blog</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Review</a>
+                <a href="#"
+                    class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">About
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+</nav>
+   </nav>
+
+
+    <!-- Gallery section -->
+    
+    <div class="text-center py-1 px-2 mx-1/4">
+      <h1 class=" hover:text-red-300"><strong>Gallery</strong></h1>
+      <h1 class=" hover:text-red-300"><strong>Safari adventure</strong></h1> 
+      <p>Encounter magnificent wildlife on an unforgettable safari experience in Africa</p> 
+      </div>
+      <div class=" flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/nature 0.jpg"/>
+        <img src="./assets/img/nature 9.jpg"/>
+        <img src="./assets/img/nature 10.jpg"/>
+        <img src="./assets/img/safari.jpg"/>
+      </div>
+      <div class="flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/nature 3.jpg"/>
+        <img src="./assets/img/nature rahi.jpg"/>
+        <img src="./assets/img/nature leo.jpg"/>
+        <img src="./assets/img/wildbeast.jpg"/>
+      </div>
+      
+      <div class="text-center py-1 px-2 mx-1/4">
+        <h1 class=" hover:text-red-300"><strong>Tropical Rainforest</strong></h1> 
+      <p>Trek through lush jungles and encounter diverse waterfalls and ancient trees in the Amazon Rainforest</p> 
+      </div>
+
+
+      <div class="flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/nature 20.jpg"/>
+        <img src="./assets/img/nature 11.jpg"/>
+        <img src="./assets/img/nature 12.jpg"/>
+        <img src="./assets/img/nature 27.jpg"/>
+      </div>  
+      <div class="flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/natue 22.jpg"/>
+        <img src="./assets/img/nature 25.jpg"/>
+        <img src="./assets/img/nature 26.jpg"/>
+        <img src="./assets/img/nature29.jpg"/>
+      </div>  
+
+
+      <div class="text-center py-1 px-2 mx-1/4">
+        <h1 class=" hover:text-red-300"><strong>Costal charm Clinque terre</strong></h1> 
+      <p>Explore the colorful cliffside beaches and azure waters of Italy's cinque terre coastline</p> 
+      </div>
+      
+      
+      <div class="flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/beach 2.1.jpg"/>
+        <img src="./assets/img/beach 4.jpg"/>
+        <img src="./assets/img/beach 9.jpg"/>
+        <img src="./assets/img/beach 7.1.jpg"/>
+      </div>  
+      <div class="flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/beach7.jpg"/>
+        <img src="./assets/img/beach 22.jpg"/>
+        <img src="./assets/img/beach 24.jpg"/>
+        <img src="./assets/img/beach23.jpg"/>
+      </div>
+
+      <div class="text-center py-1 px-2 mx-1/4">
+        <h1 class=" hover:text-red-300"><strong>Historic landmarks</strong></h1> 
+      <p>Step back in time and marvel at acient wonders like the Colosseum in Rome Italy Egypt pyramid and the Great wall of china</p> 
+      </div>
+      
+      <div class="flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/hisrorical.jpg"/>
+        <img src="./assets/img/historical 1.jpg"/>
+        <img src="./assets/img/historical 2.jpg"/>
+        <img src="./assets/img/historical 5.jpg"/>
+      </div>  
+      
+      <div class="flex align-items space-x-2  px-2 py-3 m-3 mx-2 mb-4 mb-lg-0 w-1/4">
+        <img src="./assets/img/historical 6.jpg"/>
+        <img src="./assets/img/mzee jomo.jpg"/>
+        <img src="./assets/img/historical 3.jpg"/>
+        <img src="./assets/img/historic 20.jpg"/>
+      </div>  
+      
+
+
+      <!-- BLOG SECTION -->
+      <div class="text-center py-1 px-2 mx-1/4">
+      <h1 class=" hover:text-red-300"><strong>Blog</strong></h1>
+      <p>The ultimate guide to budget-friendly travels</p>
+      </div>
+
+      <div class="container my-12 mx-auto px-4 md:px-12">
+
+        <div class="flex flex-wrap -mx-1 lg:-mx-4">
+    
+            
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+    
+                
+         <article class="overflow-hidden rounded-lg shadow-lg">
+    
+         <a href="#">
+        <img class="block h-auto w-full" src="./assets/img/roadtrip.jpg">
+        </a>
+    
+         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+    
+            <h1 class="text-lg">
+        
+          <a>
+          <h2 class="hover:text-red-300"><strong>The Ultimate Road Trip Adventure </strong></h2>
+            we immerse ourselves in the charm and hospitality of small-town in KENYA. We wander through quaint main streets lined with history.
+           
+              </a>
+         </h1>
+                        
+                </header>
+    
+        <div class="flex items-center justify-between leading-none p-2 md:p-4">
+          <a class="flex items-center  hover:underline" href="#">
+       <img alt="Placeholder" class="block rounded-full w-10 aspect-square" src="./assets/img/beach 7.1.jpg">
+                           
+          Alvin
+            
+         </a>
+        <a class="no-underline " href="#">
+            <span class="hidden">Like</span>
+              <i class="fa fa-heart"></i>
+               </a>
+            </div>
+    
+     </article>
+                
+    
+      </div>
+            
+    
+          
+      <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+    
+
+     <article class="overflow-hidden rounded-lg shadow-lg">
+    
+        <a href="#">
+           <img  class="block h-auto w-full" src="./assets/img/family 8.jpg">
+          </a>
+    
+      <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+       <h1 class="text-lg">
+        
+      <a>
+        <h2 class="hover:text-red-300"><strong>Paradise Found</strong></h2>
+        Escape the hustle and bustle of everyday life and embark on a family vacation like no other at our idyllic family resort. Nestled amidst pristine swimming pools.
+      </a>
+      </h1>
+                        
+                      
+     </header>
+    
+      <div class="flex items-center justify-between leading-none p-2 md:p-4">
+         <a class="flex items-center hover:underline" href="#">
+          <img class="block rounded-full w-10 aspect-square" src="./assets/img/beach 7.1.jpg">
+                            
+            Alvin
+                          
+             </a>
+             <a href="#">
+            
+            <span class="hidden">Like</span>
+          <i class="fa fa-heart"></i>
+         </a>
+        </div>
+    
+    </article>
+            
+    
+     </div>
+            
+    
+            
+    <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+    
+              
+     <article class="overflow-hidden rounded-lg shadow-lg">
+    
+     <a href="#">
+      <img class="block h-auto w-full" src="./assets/img/family 9.jpg">
+    </a>
+    
+     <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+     <h1 class="text-lg">
+            <a>
+                <h2 class="hover:text-red-300"><strong>Sleep in Style</strong></h2>
+                Indulge in the ultimate relaxation and comfort as you retreat to your own private sanctuary at our luxury resort. In Our meticulously designed bedrooms.
+           </a>
+       </h1>
+                        
+                          
+                        
+         </header>
+    
+     <div class="flex items-center justify-between leading-none p-2 md:p-4">
+         <a class="flex items-center hover:underline " href="#">
+             <img class="block rounded-full w-10 aspect-square" src="./assets/img/beach 7.1.jpg">
+                            
+             Alvin
+              
+          </a>
+        <a href="#">
+            <span class="hidden">Like</span>
+         <i class="fa fa-heart"></i>
+         </a>
+     </div>
+    
+     </article>
+              
+    
+          </div>
+      
+     <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+  
+         <article class="overflow-hidden rounded-lg shadow-lg">
+
+         <a href="#">
+          <img class="block h-auto w-full" src="./assets/img/family 7.jpg">
+             </a>
+    
+        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+            <h1 class="text-lg">
+            <a>
+                <h2 class="hover:text-red-300"><strong>Family Getaway:</strong></h2>
+                Escape the hustle and bustle of daily life and reconnect with your loved ones on a memorable family getaway at our idyllic retreat.
+          </a>
+            </h1>
+                        
+          </header>
+    
+          <div class="flex items-center justify-between leading-none p-2 md:p-4">
+             <a class="flex items-center hover:underline" href="#">
+             <img class="block rounded-full w-10 aspect-square" src="./assets/img/beach 7.1.jpg">
+                            
+             Alvin
+
+         </a>
+         <a href="#">
+          <span class="hidden">Like</span>
+          <i class="fa fa-heart"></i>
+         </a>
+          </div>
+    
+         </article>
+    
+    
+        </div>
+    
+
+         <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+    
+      
+         <article class="overflow-hidden rounded-lg shadow-lg">
+    
+            <a href="#">
+          <img class="block h-auto w-full" src="./assets/img/family.jpeg">
+        </a>
+    
+        <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+        <h1 class="text-lg">
+         <a>
+            <h2 class="hover:text-red-300"><strong>Sun, Sand, and Smiles</strong></h2>
+            Picture this: soft, powdery sand beneath your toes, the soothing sound of waves lapping against the shore, and endless stretches of azure sky stretching out before you.
+          </a>
+         </h1>
+                        
+         </header>
+    
+         <div class="flex items-center justify-between leading-none p-2 md:p-4">
+         <a class="flex items-center hover:underline " href="#">
+             <img class="block rounded-full w-10 aspect-square " src="./assets/img/beach 7.1.jpg">
+                            
+             Alvin
+                            
+         </a>
+        <a href="#">
+         <span class="hidden">Like</span>
+         <i class="fa fa-heart"></i>
+         </a>
+         </div>
+    
+          </article>
+          
+    
+         </div>
+
+        <div class="my-1 px-1 w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3">
+    
+      
+        <article class="overflow-hidden rounded-lg shadow-lg">
+    
+       <a href="#">
+         <img class="block h-auto w-full" src="./assets/img/family crui.jpg">
+         </a>
+    
+         <header class="flex items-center justify-between leading-tight p-2 md:p-4">
+         <h1 class="text-lg">
+          <a>
+            <h2 class="hover:text-red-300"><strong> A Cruise Vacation Like No Other</strong></h2>
+            Ahoy, adventurers! Get ready to embark on the voyage of a lifetime as we set sail for sun-drenched shores.
+          </a>
+          </h1>
+                        
+                      
+          </header>
+    
+         <div class="flex items-center justify-between leading-none p-2 md:p-4">
+         <a class="flex items-center no-underline hover:underline" href="#">
+         <img  class="block rounded-full w-10 aspect-square" src="./assets/img/beach 7.1.jpg">
+                        
+           Alvin
+                          
+         </a>
+          <a  href="#">
+           <span class="hidden">Like</span>
+        <i class="fa fa-heart"></i>
+         </a>
+         </div>
+    
+        </article>
+        
+    
+         </div>
+        
+    
+    </div>
+    </div>
+
+    
+      <!-- fotter section -->
+<fotter>
+  <footer class="relative bg-gray-900 pt-8 pb-6 text-white">
+    <div class="container mx-auto px-4">
+        <div class="flex flex-wrap text-left lg:text-left">
+            <div class="w-full lg:w-6/12 px-4">
+                <h4 class="text-3xl fonat-semibold text-blueGray-700">Let's keep in touch!</h4>
+                <h5 class="text-lg mt-0 mb-2 text-blueGray-600">
+                    Find us on any of these platforms, we respond 1-2 business days.
+                </h5>
+                <div class="mt-6 lg:mb-0 mb-6">
+                    <button
+                        class="bg-white text-black shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                        type="button">
+                        <i class="fab fa-twitter"></i></button><button
+                        class="bg-white text-black shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                        type="button">
+                        <i class="fab fa-facebook-square"></i></button><button
+                        class="bg-white text-black shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                        type="button">
+                        <i class="fab fa-dribbble"></i></button><button
+                        class="bg-white text-black shadow-lg font-normal h-10 w-10 items-center justify-center align-center rounded-full outline-none focus:outline-none mr-2"
+                        type="button">
+                        <i class="fab fa-github"></i>
+                    </button>
+                </div>
+            </div>
+            <div class="w-full lg:w-6/12 px-4">
+                <div class="flex flex-wrap items-top mb-6">
+                    <div class="w-full lg:w-4/12 px-4 ml-auto">
+                        <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Useful
+                            Links</span>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://www.creative-tim.com/presentation?ref=njs-profile">About Us</a>
+                            </li>
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://blog.creative-tim.com?ref=njs-profile">Blog</a>
+                            </li>
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://www.github.com/creativetimofficial?ref=njs-profile">Github</a>
+                            </li>
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://www.creative-tim.com/bootstrap-themes/free?ref=njs-profile">Free
+                                    Products</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="w-full lg:w-4/12 px-4">
+                        <span class="block uppercase text-blueGray-500 text-sm font-semibold mb-2">Other
+                            Resources</span>
+                        <ul class="list-unstyled">
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://github.com/creativetimofficial/notus-js/blob/main/LICENSE.md?ref=njs-profile">MIT
+                                    License</a>
+                            </li>
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://creative-tim.com/terms?ref=njs-profile">Terms &amp; Conditions</a>
+                            </li>
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://creative-tim.com/privacy?ref=njs-profile">Privacy Policy</a>
+                            </li>
+                            <li>
+                                <a class="text-blueGray-600 hover:text-blueGray-800 font-semibold block pb-2 text-sm"
+                                    href="https://creative-tim.com/contact-us?ref=njs-profile">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <hr class="my-6 border-blueGray-300">
+        <div class="flex flex-wrap items-center md:justify-between justify-center">
+            <div class="w-full md:w-4/12 px-4 mx-auto text-center">
+                <div class="text-sm text-blueGray-500 font-semibold py-1">
+                    Copyright © <span id="get-current-year">2021</span><a
+                        href="https://www.creative-tim.com/product/notus-js"
+                        class="text-blueGray-500 hover:text-gray-800" target="_blank"> Notus JS by
+                        <a href="https://www.creative-tim.com?ref=njs-profile"
+                            class="text-blueGray-500 hover:text-blueGray-800">Creative Tim</a>.
+                </div>
+            </div>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
